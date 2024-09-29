@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --primary: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --muted: 240 4.8% 95.9%;
+    --accent: 240 4.8% 95.9%;
+    --destructive: 0 84.2% 60.2%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --muted: 240 3.7% 15.9%;
+    --accent: 240 3.7% 15.9%;
+  }
+}
+
+body {
+  background-color: var(--background);
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.auth-page {
+  height: 100vh;
+  background: url("../public/glass-bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-layout::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Additional utility styles */
+.u-triangle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 8px solid var(--accent);
+  transform: translateY(-50%);
+}
